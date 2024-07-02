@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL COLOSAL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">EL COLOSAL</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="ofertas">
+            <div class="container">
+                <h2>Nuestras Ofertas de Artículos de Bazar</h2>
+                <table>
+                    <tr>
+                        <th>Artículo</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                        <th>Precio</th>
+                    </tr>
+                    <tr>
+                        <td>Lámpara de Escritorio</td>
+                        <td>Lámpara LED flexible</td>
+                        <td><img src="imagenes/lamparon.jpg" alt="Lámpara de Escritorio"></td>
+                        <td>$15.500</td>
+                    </tr>
+                    <tr>
+                        <td>Juego de Utensilios de Cocina</td>
+                        <td>Set de utensilios antiadherentes</td>
+                        <td><img  class="utensillos" src="imagenes/utensillos.png" alt=""></td>
+                        <td>$98.000</td>
+                    </tr>
+                    <tr>
+                        <td>Juego de Toallas</td>
+                        <td>Toallas de algodón suave</td>
+                        <td><img  class="toallas" src="imagenes/toallas.png" alt=""></td>
+                        <td>$60.000</td>
+                    </tr>
+                    <tr>
+                        <td>Set de Organizadores de Escritorio</td>
+                        <td>Organizadores de plástico multiusos</td>
+                        <td><img class="separadores" src="imagenes/separador.png" alt=""></td>
+                        <td>$5.000</td>
+                    </tr>
+                </table>
+                <form action="procesar_pedido.php" method="POST" class="order-form">
+                    <label for="articulo">Seleccione un artículo:</label>
+                    <select id="articulo" name="articulo">
+                        <option value="lampara">Lámpara de Escritorio</option>
+                        <option value="utensilios">Juego de Utensilios de Cocina</option>
+                        <option value="toallas">Juego de Toallas</option>
+                        <option value="organizadores">Set de Organizadores de Escritorio</option>
+                    </select>
+                    <br>
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+                    <br>
+                    <label for="comentarios">Comentarios:</label><br>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+                    <br>
+                    <input type="submit" value="Enviar Pedido" class="btn-submit">
+                    <input type="reset" value="Limpiar" class="btn-reset">
+                </form>
+                <section class="comentarios">
+                    <h2>Comentarios</h2>
+                    <textarea id="caja-comentarios" name="caja-comentarios" rows="4" cols="50"></textarea>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Derechos reservados &copy; 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
